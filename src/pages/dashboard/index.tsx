@@ -54,10 +54,8 @@ export default function Dashboard({ user }: HomeProps) {
                         public: doc.data().public
                     })
                 })
-
                 setTasks(lista);
             })
-
         }
 
         loadTarefas();
@@ -73,7 +71,6 @@ export default function Dashboard({ user }: HomeProps) {
         if (input === "") return;
 
         try {
-
             await addDoc(collection(db, "tasks"), {
                 task: input,
                 created: new Date(),
